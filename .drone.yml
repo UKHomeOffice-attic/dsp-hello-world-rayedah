@@ -27,6 +27,8 @@ pipeline:
     image: quay.io/ukhomeofficedigital/kd:latest
     commands:
       - |
+        export APP_NAME="dsp-hello-world-rayedah"
+        export APP_VERSION=${DRONE_COMMIT_SHA}
         export KUBE_NAMESPACE="dsp-hello-world-rayedah"
         export KUBE_SERVER=${KUBE_SERVER_CI}
         export KUBE_TOKEN=${KUBE_TOKEN_CI}
